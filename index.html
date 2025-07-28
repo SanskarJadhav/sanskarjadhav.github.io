@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sanskar Jadhav | About Me</title>
+<link rel="icon" href="sj.png" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+    :root {
+    --bg: #ffffff;
+    --text: #333333;
+    --secondary: #777;
+    --accent: #007acc;
+    }
+
+    body.dark {
+    --bg: #000000;
+    --text: #ffffff;
+    --secondary: #c9c9c9;
+    }
+
+    body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+    transition: background 0.3s, color 0.3s;
+    }
+
+    canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+    }
+
+    .container {
+    position: relative;
+    z-index: 1;
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: rgba(255,255,255,0.9);
+    transition: background 0.3s;
+    }
+
+    body.dark .container {
+    background: rgba(0,0,0,0.9);
+    }
+
+    header {
+    text-align: center;
+    margin-bottom: 40px;
+    }
+
+    .pfp {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid var(--accent);
+    margin-bottom: 10px;
+    object-fit: cover;
+    object-position: center;
+    }
+
+    h1 {
+    font-size: 2.5em;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0px;
+    }
+
+    h2 {
+    font-size: 1.2em;
+    color: var(--secondary);
+    margin-top: 0px;
+    margin-bottom: 2px;
+    }
+
+    .theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    transition: background 0.3s;
+    background: #000; /* default for moon icon */
+    }
+
+    .subtitle {
+    font-size: 1.4em;
+    color: var(--text); /* same as h1 */
+    margin-top: 5px;
+    }
+
+    section {
+    margin-bottom: 40px;
+    }
+    h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: var(--accent);
+    }
+    h4 {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    }
+    ul {
+    padding-left: 20px;
+    }
+    ul li {
+    margin-bottom: 6px;
+    }
+    a {
+    color: var(--accent);
+    text-decoration: none;
+    }
+    a:hover {
+    text-decoration: underline;
+    }
+    p {
+    text-align: justify;
+    }
+
+    .social-icons {
+    margin: 10px 0 8px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    }
+
+    .social-icons img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.2s ease, filter 0.3s ease;
+    }
+
+    .social-icons img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+    }
+
+</style>
+</head>
+<body>
+<canvas id="dnaCanvas"></canvas>
+<div class="theme-toggle" onclick="toggleTheme()">
+<div id="themeIcon">🌙</div>
+</div>
+<div class="container">
+    <header>
+        <img src="SJpic.png" alt="Profile Picture" class="pfp" />
+        <h1>Sanskar Jadhav</h1>
+        <div class="social-icons">
+        <a href="mailto:sjadhav1102@gmail.com" target="_blank">
+            <img src="communication.png" alt="Email" />
+        </a>
+        <a href="https://github.com/SanskarJadhav" target="_blank">
+            <img src="github.png" alt="GitHub" />
+        </a>
+        <a href="https://linkedin.com/in/sanskarjadhav" target="_blank">
+            <img src="linkedin.png" alt="LinkedIn" />
+        </a>
+        </div>
+        <h2 class="subtitle">ML Engineer</h2>
+        <h2>(Robotics & Autonomous Systems)</h2>
+    </header>
+    <section>
+    <h3>About</h3>
+    <p>I specialize in deploying learning pipelines for real-world applications in autonomous navigation, perception, and control. My work and interest lies in embodied cognitive AI, a.k.a. <i>"teaching robots to be more <b>human</b> in nature"</i>.</p>
+    </section>
+
+    <section>
+    <h3>Skills</h3>
+    <ul>
+        <li>Python, C++, ROS 2, OpenCV, TensorFlow, PyTorch</li>
+        <li>Machine Learning, Deep Learning, Reinforcement Learning</li>
+        <li>SLAM, Motion Planning, Perception, Computer Vision</li>
+        <li>Docker, Git, Linux, Gazebo, RViz</li>
+    </ul>
+    </section>
+
+    <section>
+    <h3>Experience</h3>
+    <h4>Robotics ML Engineer – Autonomy Labs</h4>
+    <p><em>Jan 2023 – Present</em><br>Developing neural control models and integrating deep RL policies with ROS 2 for mobile robot autonomy.</p>
+
+    <h4>AI Intern – TechX Innovations</h4>
+    <p><em>Jun 2022 – Dec 2022</em><br>Built CNN-based perception pipeline for indoor localization and path prediction.</p>
+    </section>
+
+    <section>
+    <h3>Education</h3>
+    <h4>B.Tech in Electronics & AI – ABC University</h4>
+    <p><em>2019 – 2023</em><br>Graduated with distinction. Led final year project on reinforcement learning for robot arm manipulation.</p>
+    </section>
+
+    <section>
+    <h3>Projects</h3>
+    <ul>
+        <li><strong>Autonomous Drone Navigator:</strong> Vision-based SLAM and path tracking.</li>
+        <li><strong>RL Robot Arm Trainer:</strong> Trained a robotic arm to complete pick-and-place tasks using PPO.</li>
+        <li><strong>ROS2 SLAM Toolkit:</strong> Open-source framework for mapping and localization with LiDAR.</li>
+    </ul>
+    </section>
+
+</div>
+
+<script>
+const canvas = document.getElementById('dnaCanvas');
+const ctx = canvas.getContext('2d');
+let time = 0, w, h;
+
+const mlCodePairs = [
+['tensor', 'matrix'], ['gradient', 'slope'], ['optimizer', 'adam'], ['loss', 'function'],
+['backprop', 'update'], ['epoch', 'iteration'], ['sigmoid', 'activation'], ['relu', 'nonlinearity'],
+['dropout', 'regularization'], ['layer', 'dense'], ['forward', 'pass'], ['robot', 'motion'],
+['ros2', 'publisher'], ['navigation', 'planner'], ['slam', 'mapping'], ['perception', 'vision'],
+['inference', 'runtime'], ['node', 'graph'], ['subscriber', 'listener'], ['transform', 'frame']
+];
+
+const colorPalette = ['#e74c3c', '#f1c40f', '#3498db', '#2ecc71'];
+
+function resize() {
+w = canvas.width = window.innerWidth;
+h = canvas.height = window.innerHeight;
+}
+window.addEventListener('resize', resize);
+resize();
+
+function drawDNA() {
+ctx.clearRect(0, 0, w, h);
+const strandX = [150, w - 150];
+const amp = 40, freq = 0.02, step = 20;
+let row = 0;
+
+for (let baseX of strandX) {
+    for (let y = 0; y < h; y += step) {
+    const angle = freq * y + time;
+    const x = baseX + Math.sin(angle) * amp;
+    const mirrorX = baseX - Math.sin(angle) * amp;
+
+    const isDark = document.body.classList.contains('dark');
+    const color = colorPalette[row % colorPalette.length];
+
+    ctx.fillStyle = color;
+    ctx.font = '12px monospace';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+
+    const [word1, word2] = mlCodePairs[row % mlCodePairs.length];
+
+    if (isDark) {
+        ctx.fillText(word1, x, y);
+        ctx.fillText(word2, mirrorX, y);
+    } else {
+        ctx.beginPath();
+        ctx.arc(x, y, 2.5, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(mirrorX, y, 2.5, 0, 2 * Math.PI);
+        ctx.fill();
+    }
+
+    if (y % 40 === 0) {
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+        ctx.lineTo(mirrorX, y);
+        ctx.strokeStyle = 'rgba(128,128,128,0.3)';
+        ctx.stroke();
+    }
+    row++;
+    }
+}
+
+time += 0.01;
+requestAnimationFrame(drawDNA);
+}
+
+drawDNA();
+
+function toggleTheme() {
+  const isDark = document.body.classList.toggle('dark');
+  const themeIcon = document.getElementById('themeIcon');
+  const toggle = document.querySelector('.theme-toggle');
+
+  if (isDark) {
+    themeIcon.textContent = '☀️';
+    toggle.style.background = '#fff';
+    toggle.style.color = '#000';
+  } else {
+    themeIcon.textContent = '🌙';
+    toggle.style.background = '#000';
+    toggle.style.color = '#fff';
+  }
+}
+
+</script>
+</body>
+</html>
