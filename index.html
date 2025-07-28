@@ -149,6 +149,44 @@
     filter: brightness(1.2);
     }
 
+    .icon-wrapper {
+    position: relative;
+    display: inline-block;
+    }
+
+    .horizontal-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px; /* more spacing */
+    margin-bottom: 20px;
+    }
+
+    .circle-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s, filter 0.3s;
+    border: none; /* no outline */
+    }
+
+    .circle-icon:hover {
+    transform: scale(1.15);
+    filter: brightness(1.2);
+    }
+
+    .pfp-large {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 4px solid var(--accent);
+    transition: transform 0.3s;
+    }
+
 </style>
 </head>
 <body>
@@ -158,7 +196,13 @@
 </div>
 <div class="container">
     <header>
-        <img src="SJpic.png" alt="Profile Picture" class="pfp" />
+        <div class="horizontal-icons">
+            <img src="siu.png" class="circle-icon" onclick="scrollToSection('education')" />
+            <img src="kalyani.png" class="circle-icon" onclick="scrollToSection('education')" />
+            <img src="SJpic.png" alt="Profile Picture" class="pfp-large" />
+            <img src="iitb.png" class="circle-icon" onclick="scrollToSection('education')" />
+            <img src="cornell.png" class="circle-icon" onclick="scrollToSection('education')" />
+        </div>
         <h1>Sanskar Jadhav</h1>
         <div class="social-icons">
         <a href="mailto:sjadhav1102@gmail.com" target="_blank">
@@ -198,7 +242,7 @@
     <p><em>Jun 2022 – Dec 2022</em><br>Built CNN-based perception pipeline for indoor localization and path prediction.</p>
     </section>
 
-    <section>
+    <section id="education">
     <h3>Education</h3>
     <h4>B.Tech in Electronics & AI – ABC University</h4>
     <p><em>2019 – 2023</em><br>Graduated with distinction. Led final year project on reinforcement learning for robot arm manipulation.</p>
@@ -229,6 +273,13 @@ const mlCodePairs = [
 ];
 
 const colorPalette = ['#e74c3c', '#f1c40f', '#3498db', '#2ecc71'];
+
+function scrollToSection(id) {
+  const section = document.querySelector(`section[id="${id}"]`) || document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+}
 
 function resize() {
 w = canvas.width = window.innerWidth;
