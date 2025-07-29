@@ -10,11 +10,11 @@
     --bg: #ffffff;
     --text: #333333;
     --secondary: #777;
-    --accent: #007acc;
+    --accent: #147ace;
     }
 
     body.dark {
-    --bg: #000000;
+    --bg: rgb(15, 15, 15);
     --text: #ffffff;
     --secondary: #c9c9c9;
     }
@@ -47,7 +47,7 @@
     }
 
     body.dark .container {
-    background: rgba(0,0,0,0.9);
+    background: rgba(15, 15, 15, 0.9);
     }
 
     header {
@@ -93,7 +93,7 @@
     color: white;
     font-size: 18px;
     transition: background 0.3s;
-    background: #000; /* default for moon icon */
+    background: rgb(15, 15, 15); /* default for moon icon */
     }
 
     .subtitle {
@@ -114,6 +114,11 @@
     font-size: 1.1em;
     margin-bottom: 5px;
     }
+    h5 {
+    font-size: 1em;
+    margin-bottom: 2px;
+    margin-top: 0px;
+    }
     ul {
     padding-left: 20px;
     }
@@ -121,7 +126,7 @@
     margin-bottom: 6px;
     }
     a {
-    color: var(--accent);
+    color: rgb(206, 16, 16);
     text-decoration: none;
     }
     a:hover {
@@ -216,11 +221,11 @@
         </a>
         </div>
         <h2 class="subtitle">ML Engineer</h2>
-        <h2>(Robotics & Autonomous Systems)</h2>
+        <h2>(AI for Autonomous Systems and Robots)</h2>
     </header>
     <section>
     <h3>About</h3>
-    <p>I specialize in deploying learning pipelines for real-world applications in autonomous navigation, perception, and control. My work and interest lies in embodied cognitive AI, a.k.a. <i>"teaching robots to be more <b>human</b> in nature"</i>.</p>
+    <p>I specialize in deploying learning pipelines for real-world applications of human-assisted tasks, such as adaptive navigation, visual understanding, and system control. My work and interest lies in embodied cognitive AI, a.k.a. <i>"teaching robots to be more <b>human</b> in nature"</i>.</p>
     </section>
 
     <section id="skills">
@@ -230,26 +235,29 @@
         <li><b>Professional:</b> Isaac Sim, NVIDIA Remembr, Unitree SDK, Meta Segment Anything 2, Voilà Dashboards, Streamlit, Ollama, ROS 2 Services, Model Optimization and Pipeline Automation</li>
     </ul>
     </section>
+    
+    <section id="education">
+    <h3>Education</h3>
+    <h4><a href="https://www.cornell.edu/">Cornell University</a> - <a href="https://tech.cornell.edu/">Cornell Tech</a></h4>
+    <h5>MEng in Electrical & Computer Engineering</h5>
+    <p><em>2025 – 2026</em><br><br><b>Merit Scholar</b>.
+    <h4><a href="https://www.siu.edu.in/">Symbiosis International University</a> - <a href="https://www.sitpune.edu.in/">Symbiosis Institute of Technology</a></h4>
+    <h5>BTech in Artificial Intelligence & Machine Learning (Minor in Aerial Robotics) - CGPA 9.45 / 10</h5>
+    <p><em>2021 – 2025</em><br><br>Graduated <b>Summa Cum Laude (Rank 1)</b>. <br>Individual final year project on autonomous AI for robot navigation and visualization.</p>
+    </section>
 
     <section id="experience">
     <h3>Experience</h3>
     <h4>AI/ML Intern – <i><a href="https://www.bharatforge.com/" target="_blank">Bharat Forge Limited, Pune, India</a></i></h4>
-    <p><em>Aug 2024 – Jul 2025</em></p>
+    <p><em>Aug 2024 – Jul 2025 (One-year internship, offered FT Engineer role, opted for pursuing Masters)</em></p>
     <ul>
-        <li>Worked in the Robotics team in the <a href="https://www.bharatforge.com/technology-innovation/incubation-centre" target="_blank">AI & ML Tech Centre</a> for one year on developing core AGI modules for multiple robots</li>
-        <li>Developed a custom local application utilizing Meta’s SAM 2 model and YOLO for autonomous segmentation and annotation of multiple objects in a video, eliminating the need for online annotation tools and maintaining data privacy</li>
+        <li>Worked in the Robotics team at the <a href="https://www.bharatforge.com/technology-innovation/incubation-centre" target="_blank">AI & ML Tech Centre</a> on developing core AGI modules</li>
+        <li>Developed a custom local application utilizing <a href="https://ai.meta.com/sam2/">Meta’s SAM 2</a> model and YOLO for autonomous segmentation and annotation of multiple objects in a video, eliminating the need for online annotation tools and maintaining data privacy</li>
         <li>Created a docker for real-time angle detection with streaming using ROSBridge for anomaly detection in machinery</li>
-        <li>Created a robust open area exploration algorithm using vision with dynamic obstacle avoidance tested on Unitree quadruped, wheeled, and humanoid robots both indoors and on shop floors</li>
-        <li>Developed a custom pipeline integrating NVIDIA’s Remembr with deployment on the Unitree B2 robot using OpenAI for environment visualization, MilvusDB for memory embeddings, and Llama3 for similarity matching when querying</li>
-        <li>Worked on Sim2Real imitation and inter-robot communication in Isaac Sim with the Unitree Go2 and UR10 arm robots</li>
-        <li>Worked on deep RL training with optimization of TD3 performance in custom 30x30m environments in Gazebo for the Unitree Go2 in navigating towards random goal positions with obstacle avoidance</li>
+        <li>Created a robust open area exploration algorithm using vision with dynamic obstacle avoidance tested on <a href="https://www.unitree.com/">Unitree</a> quadruped, wheeled, and humanoid robots both indoors and on shop floors</li>
+        <li>Developed a custom pipeline integrating <a href="https://nvidia-ai-iot.github.io/remembr/">NVIDIA’s Remembr</a> with deployment on the Unitree B2 robot using OpenAI for environment visualization, MilvusDB for memory embeddings, and Llama3 for similarity matching when querying</li>
+        <li>Worked on Sim2Real imitation and inter-robot communication in <a href="https://developer.nvidia.com/isaac/sim">Isaac Sim</a> with the Unitree Go2 and UR10 arm robots</li>
     </ul>
-    </section>
-
-    <section id="education">
-    <h3>Education</h3>
-    <h4>B.Tech in Electronics & AI – ABC University</h4>
-    <p><em>2019 – 2023</em><br>Graduated with distinction. Led final year project on reinforcement learning for robot arm manipulation.</p>
     </section>
 
     <section id="projects">
