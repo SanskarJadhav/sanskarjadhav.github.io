@@ -305,7 +305,7 @@ resize();
 
 function drawDNA() {
 ctx.clearRect(0, 0, w, h);
-const strandX = [125, w - 125];
+const strandX = [135, w - 135];
 const amp = 40, freq = 0.02, step = 20;
 let row = 0;
 
@@ -369,6 +369,11 @@ function toggleTheme() {
     toggle.style.color = '#fff';
   }
 }
+
+document.querySelectorAll('a[href^="http"]').forEach(link => {
+  link.setAttribute('target', '_blank');
+  link.setAttribute('rel', 'noopener noreferrer');
+});
 
 </script>
 </body>
